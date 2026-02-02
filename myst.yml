@@ -15,7 +15,7 @@ project:
         - file: notebooks/02 - Linear Models.ipynb
         - file: notebooks/03 - Model Evaluation.ipynb
         - file: notebooks/04 - Ensemble Learning.ipynb
-        - file: notebooks/05 - Data Preprocessing.ipynb
+        - file: notebooks/05 - Data Engineering.ipynb
         - file: notebooks/06 - Neural Networks.ipynb
         - file: notebooks/07 - Convolutional Neural Networks.ipynb
         - file: notebooks/08 - Transformers.ipynb
