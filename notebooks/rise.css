@@ -1,14 +1,44 @@
-/* 1. Hide input ONLY in Code Cells */
-.rise-enabled .jp-CodeCell .jp-InputArea {
+/* Hide the container that holds the code */
+.rise-enabled .jp-CodeCell .jp-Cell-inputWrapper {
     display: none !important;
 }
 
-/* 2. (Optional) Hide the "In [ ]:" prompt for cleaner slides */
-.rise-enabled .jp-CodeCell .jp-InputPrompt {
+/* Force the container that holds the output (graphs/tables) to be visible */
+.rise-enabled .jp-CodeCell .jp-Cell-outputWrapper {
+    display: block !important;
+    margin-top: 0 !important; /* Remove gap where code used to be */
+}
+
+/* --- 2. CLEAN UP PROMPTS --- */
+
+/* Hide the prompts like "In [1]:" or "Out [1]:" */
+.rise-enabled .jp-InputPrompt,
+.rise-enabled .jp-OutputPrompt {
     display: none !important;
 }
 
-/* 3. Ensure Markdown cells remain visible */
+/* --- 3. FIX BORDERS & BLUE LINES --- */
+
+/* Remove the blue "active cell" box shadow/border */
+.rise-enabled .jp-Cell.jp-mod-active,
+.rise-enabled .jp-Cell.jp-mod-selected,
+.rise-enabled .jp-Cell:focus {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove the fat blue line on the left side */
+.rise-enabled .jp-Cell.jp-mod-active {
+    border-left-color: transparent !important;
+}
+
+/* Hide the collapsible strip on the far left */
+.rise-enabled .jp-Collapser {
+    display: none !important;
+}
+
+/* Ensure Markdown cells are always visible */
 .rise-enabled .jp-MarkdownCell {
     display: block !important;
 }
